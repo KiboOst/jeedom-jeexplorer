@@ -4,8 +4,11 @@ if (!isConnect('admin')) {
 }
 
 $plugin = plugin::byId('jeexplorer');
-$jeexplorerLang = config::byKey('language', 'jeexplorer', 'fr');
-sendVarToJS('jeexplorerLang', $jeexplorerLang);
+$jeeXplorerConfig = array();
+$jeeXplorerConfig["lang"] = config::byKey('language', 'jeexplorer', 'fr');
+$jeeXplorerConfig["rememberLastDir"] = config::byKey('rememberLastDir', 'jeexplorer', '1');
+$jeeXplorerConfig["rememberLastDir"] = ($jeeXplorerConfig["rememberLastDir"] == "1" ? true : false);
+sendVarToJS('jeeXplorerConfig', $jeeXplorerConfig);
 
 //core codemirror
 include_file('3rdparty', 'codemirror/lib/codemirror', 'js');
@@ -46,7 +49,7 @@ include_file('3rdparty/elfinder', 'elfinder.min', 'js', 'jeexplorer');
 </style>
 
 <?php
-  $plufinSrc = '/plugins/jeexplorer/3rdparty/elfinder/js/i18n/elfinder.' . $jeexplorerLang .'.js';
+  $plufinSrc = '/plugins/jeexplorer/3rdparty/elfinder/js/i18n/elfinder.' . $jeeXplorerConfig["lang"] .'.js';
   echo '<script src="'.$plufinSrc.'"></script>';
 
   include_file('desktop', 'jeexplorer', 'js', 'jeexplorer');
