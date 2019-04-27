@@ -47,7 +47,7 @@ include_file('3rdparty/elfinder', 'elfinder.min', 'js', 'jeexplorer');
 
 <?php
   $plufinSrc = '/plugins/jeexplorer/3rdparty/elfinder/js/i18n/elfinder.' . $jeexplorerLang .'.js';
-  echo '<script src="'.$plufinSrc.'"></script>"';
+  echo '<script src="'.$plufinSrc.'"></script>';
 
   include_file('desktop', 'jeexplorer', 'js', 'jeexplorer');
   include_file('core', 'plugin.template', 'js');
