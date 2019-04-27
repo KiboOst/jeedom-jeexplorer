@@ -13,7 +13,7 @@
  * You should have received a copy of the GNU General Public License
  * along with Jeedom. If not, see <http://www.gnu.org/licenses/>.
  */
-console.log('language:' + jeexplorerLang)
+
 $().ready(function() {
   var options = {
       url  : 'plugins/jeexplorer/3rdparty/elfinder/php/connector.minimal.php',
