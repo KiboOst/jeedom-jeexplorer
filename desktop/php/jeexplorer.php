@@ -16,6 +16,11 @@ include_file('3rdparty', 'codemirror/lib/codemirror', 'css');
 include_file('3rdparty', 'codemirror/addon/mode/loadmode', 'js');
 include_file('3rdparty', 'codemirror/mode/meta', 'js');
 
+include_file('3rdparty', 'codemirror/addon/search/search', 'js');
+include_file('3rdparty', 'codemirror/addon/search/searchcursor', 'js');
+include_file('3rdparty', 'codemirror/addon/dialog/dialog', 'js');
+include_file('3rdparty', 'codemirror/addon/dialog/dialog', 'css');
+
 //elfinder
 include_file('3rdparty/elfinder', 'elfinder.min', 'css', 'jeexplorer');
 include_file('3rdparty/elfinder/themes/Material', 'theme', 'css', 'jeexplorer');
@@ -23,7 +28,7 @@ include_file('3rdparty/elfinder', 'elfinder.min', 'js', 'jeexplorer');
 
 ?>
 
-<div id="elfinder" class="elfinder ui-helper-reset ui-helper-clearfix ui-widget ui-widget-content ui-corner-all elfinder-ltr ui-resizable"></div>
+<div id="elfinder" class=""></div>
 
 <style>
     .CodeMirror pre,
@@ -46,6 +51,11 @@ include_file('3rdparty/elfinder', 'elfinder.min', 'js', 'jeexplorer');
       max-height: calc(100% - 60px) !important;
       max-width: calc(100% - 30px) !important;
     }
+
+    .CodeMirror-dialog-top {
+      background-color: rgb(230, 230, 230);;
+    }
+
 </style>
 
 <?php
