@@ -17,9 +17,10 @@
 $().ready(function() {
   var options = {
       url  : 'plugins/jeexplorer/3rdparty/elfinder/php/connector.minimal.php',
-      lang : jeexplorerLang,
+      lang : jeeXplorerConfig.lang,
+      startPath: '',
+      rememberLastDir: jeeXplorerConfig.rememberLastDir,
       defaultView: 'list',
-      rememberLastDir: true,
       sort: 'kindDirsFirst',
       contextmenu : {
         navbar : ['open', '|', 'copy', 'cut', 'paste', 'duplicate', '|', 'rm', '|', 'info'],
