@@ -67,11 +67,12 @@ $().ready(function() {
                 }
 
                 $(".cm-s-default").height('100%')
-
                 //expand on resize modal:
                 $('.elfinder-dialog-edit').resize(function() {
                   editor.refresh()
                 })
+                $('.elfinder-dialog-active').width('75%')
+                $('.elfinder-dialog-active').css('left', '15%')
               },
               close : function(textarea, instance) {
                 //this.myCodeMirror = null;
@@ -82,7 +83,7 @@ $().ready(function() {
                 }
             }
           ]
-      }
+      },
     }
   }
   var elfinder = $('#elfinder').elfinder(options).elfinder('instance')
