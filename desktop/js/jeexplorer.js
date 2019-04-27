@@ -18,6 +18,9 @@ $().ready(function() {
   var options = {
       url  : 'plugins/jeexplorer/3rdparty/elfinder/php/connector.minimal.php',
       lang : jeexplorerLang,
+      defaultView: 'list',
+      rememberLastDir: true,
+      sort: 'kindDirsFirst',
       contextmenu : {
         navbar : ['open', '|', 'copy', 'cut', 'paste', 'duplicate', '|', 'rm', '|', 'info'],
         cwd    : ['reload', 'back', '|', 'upload', 'mkdir', 'mkfile', 'paste', '|', 'info'],
