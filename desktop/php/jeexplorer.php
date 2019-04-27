@@ -52,10 +52,13 @@ include_file('3rdparty/elfinder', 'elfinder.min', 'js', 'jeexplorer');
       max-width: calc(100% - 30px) !important;
     }
 
+    .ui-helper-reset {
+      line-height: 14px;
+    }
+
     .CodeMirror-dialog-top {
       background-color: rgb(230, 230, 230);;
     }
-
 </style>
 
 <?php
