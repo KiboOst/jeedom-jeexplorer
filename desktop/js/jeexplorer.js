@@ -25,6 +25,14 @@ $().ready(function() {
             'rm', '|', 'resize', '|', 'archive', 'extract', '|', 'info', 'places'
           ]
     },
+    handlers:
+    {
+        dblclick: function(event, elfinderInstance)
+        {
+            elfinderInstance.exec('edit')
+            return false
+        }
+    },
     commandsOptions: {
       edit : {
           editors : [
