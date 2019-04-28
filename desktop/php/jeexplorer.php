@@ -46,10 +46,14 @@ include_file('3rdparty/elfinder', 'elfinder.min', 'js', 'jeexplorer');
 <div id="elfinder" class=""></div>
 
 <style>
-  .CodeMirror pre,
+    .CodeMirror pre,
   .ui-dialog-content,
   .ui-widget textarea {
     font-size: 12px !important;
+  }
+
+  .CodeMirror-dialog-top {
+    background-color: rgb(40, 40, 40);;
   }
 
   .elfinder-dialog .ui-helper-clearfix .elfinder-cwd-icon:before {
@@ -79,10 +83,6 @@ include_file('3rdparty/elfinder', 'elfinder.min', 'js', 'jeexplorer');
     text-transform: capitalize;
   }
 
-  .CodeMirror-dialog-top {
-    background-color: rgb(40, 40, 40);;
-  }
-
   .elfinder-dialog .CodeMirror-gutter,
   .elfinder-dialog .CodeMirror-gutters,
   .elfinder-dialog .CodeMirror-linenumber,
@@ -101,9 +101,9 @@ include_file('3rdparty/elfinder', 'elfinder.min', 'js', 'jeexplorer');
   .elfinder-dialog .ui-icon-arrowreturnthick-1-s { background-position: -49px -62px!important; color:rgb(60,60,60)!important;}
   .elfinder-dialog .ui-helper-clearfix::after {height: 2px;}
 
-  .elfinder-frontmost > div {
-    color: rgb(180,180,180);
-    background: rgb(60,60,60) !important;
+  .elfinder-button-sort-menu,
+  .elfinder-button-menu-item {
+    background-color: rgb(255,255,255) !important;
   }
 </style>
 
