@@ -100,6 +100,11 @@ include_file('3rdparty/elfinder', 'elfinder.min', 'js', 'jeexplorer');
   .elfinder-dialog .ui-icon-closethick { background-position: -96px -128px!important; color:rgb(60,60,60)!important;}
   .elfinder-dialog .ui-icon-arrowreturnthick-1-s { background-position: -49px -62px!important; color:rgb(60,60,60)!important;}
   .elfinder-dialog .ui-helper-clearfix::after {height: 2px;}
+
+  .elfinder-frontmost > div {
+    color: rgb(180,180,180);
+    background: rgb(60,60,60) !important;
+  }
 </style>
 
 <?php
