@@ -22,14 +22,17 @@ if (!isConnect()) {
 	include_file('desktop', '404', 'php');
 	die();
 }
+
+include_file('3rdparty', 'codemirror/lib/codemirror', 'js');
+
 ?>
 
 <form class="form-horizontal">
 <fieldset>
-    <div class="form-group">
-        <label class="col-sm-3  col-xs-12 control-label">{{Langue de l'explorateur}}</label>
-        <div class="col-sm-3 col-xs-12">
-            <div class="dropdown dynDropdown">
+	<div class="form-group">
+		<label class="col-sm-3  col-xs-12 control-label">{{Langue de l'explorateur}}</label>
+		<div class="col-sm-3 col-xs-12">
+			<div class="dropdown dynDropdown">
 			<button class="btn btn-default dropdown-toggle configKey" type="button" data-toggle="dropdown" data-l1key="language" value="fr">
 				French<span class="caret"></span>
 			</button>
@@ -42,8 +45,41 @@ if (!isConnect()) {
 				<li><a href="#" data-value="it">Italian</a></li>
 			</ul>
 		</div>
-        </div>
-    </div>
+		</div>
+	</div>
 
+	<div class="form-group">
+		<label class="col-sm-3 col-xs-12 control-label">{{Ouvrir sur le dernier répertoire}}
+			<sup><i class="fas fa-question-circle tooltips" title="{{Ouvrir l’explorateur sur le dernier répertoire consulté}}"></i></sup>
+		</label>
+		<div class="col-sm-3 col-xs-12">
+			<input type="checkbox" class="configKey" data-l1key="rememberLastDir" />
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-sm-3 col-xs-12 control-label">{{Collapser le code à l'ouverture}}</label>
+		<div class="col-sm-3 col-xs-12">
+			<input type="checkbox" class="configKey" data-l1key="foldOnStart" />
+		</div>
+	</div>
+	<br/>
+
+	<div class="form-group">
+		<label class="col-sm-3 col-xs-6 control-label">{{CodeMiror (Core)}}</label>
+		<label class="col-sm-3 col-xs-6 control-label"><span id="cmVersion" class="label label-info"></span></label>
+	</div>
+	<div class="form-group">
+		<label class="col-sm-3 col-xs-6 control-label">{{elFinder (JeeXplorer)}}</label>
+		<label class="col-sm-3 col-xs-6 control-label"><span id="elfinderVersion" class="label label-info"></span></label>
+	</div>
 </fieldset>
 </form>
+
+<script>
+	$(function() {
+		$('#cmVersion').html(CodeMirror.version)
+		 $.getJSON("/plugins/jeexplorer/3rdparty/elfinder/package.json", function(result){
+			$('#elfinderVersion').html(result.version)
+		})
+	})
+</script>
