@@ -46,52 +46,58 @@ include_file('3rdparty/elfinder', 'elfinder.min', 'js', 'jeexplorer');
 <div id="elfinder" class=""></div>
 
 <style>
-    .CodeMirror pre,
-    .ui-dialog-content,
-    .ui-widget textarea {
-      font-size: 12px !important;
-    }
+  .CodeMirror pre,
+  .ui-dialog-content,
+  .ui-widget textarea {
+    font-size: 12px !important;
+  }
 
-    .elfinder-dialog .ui-helper-clearfix .elfinder-cwd-icon:before {
-        display: none;
-        color: red !important;
-    }
+  .elfinder-dialog .ui-helper-clearfix .elfinder-cwd-icon:before {
+      display: none;
+      color: red !important;
+  }
 
-    .elfinder-dialog .elfinder-dialog-icon-confirm {
-        display: none;
-    }
+  .elfinder-dialog .elfinder-dialog-icon-confirm {
+      display: none;
+  }
 
-    .ui-dialog.elfinder-maximized {
-      top: 50px !important;
-      max-height: calc(100% - 60px) !important;
-      max-width: calc(100% - 30px) !important;
-    }
+  .ui-dialog.elfinder-maximized {
+    top: 50px !important;
+    max-height: calc(100% - 60px) !important;
+    max-width: calc(100% - 30px) !important;
+  }
 
-    .ui-helper-reset {
-      line-height: 14px;
-    }
+  .ui-helper-reset {
+    line-height: 14px;
+  }
 
-    .elfinder-dialog {
-      font-family: "Roboto";
-    }
-    .elfinder-dialog .ui-button-text {
-      font-size: 12px;
-      text-transform: capitalize;
-    }
+  .elfinder-dialog {
+    font-family: "Roboto";
+  }
+  .elfinder-dialog .ui-button-text {
+    font-size: 12px;
+    text-transform: capitalize;
+  }
 
-    .CodeMirror-dialog-top {
-      background-color: rgb(40, 40, 40);;
-    }
+  .CodeMirror-dialog-top {
+    background-color: rgb(40, 40, 40);;
+  }
 
-    .elfinder-dialog .CodeMirror-gutter,
-    .elfinder-dialog .CodeMirror-gutters,
-    .elfinder-dialog .CodeMirror-linenumber,
-    .elfinder-dialog .CodeMirror-foldgutter-open {
-      background: rgb(70,70,70) !important;
-    }
-    .elfinder-dialog .CodeMirror-foldgutter-folded {
-      background: rgb(55,55,55) !important;
-    }
+  .elfinder-dialog .CodeMirror-gutter,
+  .elfinder-dialog .CodeMirror-gutters,
+  .elfinder-dialog .CodeMirror-linenumber,
+  .elfinder-dialog .CodeMirror-foldgutter-open {
+    background: rgb(70,70,70) !important;
+  }
+  .elfinder-dialog .CodeMirror-foldgutter-folded {
+    background: rgb(55,55,55) !important;
+  }
+
+  .elfinder-dialog .ui-icon-plusthick { background-position: -32px -127px!important; color:rgb(60,60,60)!important;}
+  .elfinder-dialog .ui-icon-minusthick { background-position: -63px -127px!important; color:rgb(60,60,60)!important;}
+  .elfinder-dialog .ui-icon-closethick { background-position: -96px -128px!important; color:rgb(60,60,60)!important;}
+  .elfinder-dialog .ui-icon-arrowreturnthick-1-s { background-position: -49px -62px!important; color:rgb(60,60,60)!important;}
+  .elfinder-dialog .ui-helper-clearfix::after {height: 2px;}
 </style>
 
 <?php
