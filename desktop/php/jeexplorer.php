@@ -93,6 +93,8 @@ include_file('3rdparty/elfinder', 'elfinder.min', 'js', 'jeexplorer');
     background: rgb(55,55,55) !important;
   }
 
+  .elfinder-dialog-title {font-family:"Roboto"; font-size:12px;}
+
   .elfinder-dialog .ui-icon-plusthick { background-position: -32px -127px!important; color:rgb(60,60,60)!important;}
   .elfinder-dialog .ui-icon-minusthick { background-position: -63px -127px!important; color:rgb(60,60,60)!important;}
   .elfinder-dialog .ui-icon-closethick { background-position: -96px -128px!important; color:rgb(60,60,60)!important;}
