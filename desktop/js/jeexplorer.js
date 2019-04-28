@@ -17,20 +17,21 @@
 $(function() {
   CodeMirror.modeURL = "/3rdparty/codemirror/mode/%N/%N.js"
   var options = {
-      url  : 'plugins/jeexplorer/3rdparty/elfinder/php/connector.minimal.php',
-      lang : jeeXplorerConfig.lang,
+      url: 'plugins/jeexplorer/3rdparty/elfinder/php/connector.minimal.php',
+      lang: jeeXplorerConfig.lang,
       startPath: '',
       rememberLastDir: jeeXplorerConfig.rememberLastDir,
       defaultView: 'list',
       sort: 'kindDirsFirst',
-      contextmenu : {
-        cwd    : ['reload', 'back', '|', 'upload', 'mkdir', 'mkfile', 'paste', '|', 'info'],
-        files  : ['edit', '|', 'open', 'rename' ,'|', 'getfile' , 'download', '|', 'copy', 'cut', 'paste', 'duplicate', '|','rm', '|', 'archive', 'extract', '|', 'info', 'places']
+      sortDirect: 'kindDirsFirst',
+      contextmenu: {
+        cwd: ['reload', 'back', '|', 'upload', 'mkdir', 'mkfile', 'paste', '|', 'info'],
+        files: ['edit', '|', 'open', 'rename' ,'|', 'getfile' , 'download', '|', 'copy', 'cut', 'paste', 'duplicate', '|','rm', '|', 'archive', 'extract', '|', 'info', 'places']
       },
-      uiOptions : {
-        toolbar : [
+      uiOptions: {
+        toolbar: [
           ['back', 'forward'],
-          ['reload'],
+          ['reload', 'sort'],
           ['home', 'up'],
           ['mkdir', 'mkfile', 'upload','download'],
           ['info'],
@@ -50,8 +51,8 @@ $(function() {
           }
       },
       commandsOptions: {
-        edit : {
-            editors : [
+        edit: {
+            editors: [
               {
                 load : function(textarea) {
                   self = this
