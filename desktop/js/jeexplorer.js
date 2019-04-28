@@ -75,8 +75,9 @@ $().ready(function() {
                 editor.scrollIntoView({line:0, char:0}, 20)
                 editor.setOption("extraKeys", {
                   "Ctrl-Y": cm => CodeMirror.commands.foldAll(cm),
-                  "Ctrl-I": cm => CodeMirror.commands.unfoldAll(cm),
+                  "Ctrl-I": cm => CodeMirror.commands.unfoldAll(cm)
                 })
+                if (jeeXplorerConfig.foldOnStart) CodeMirror.commands.foldAll(editor)
 
                 //expand on resize modal:
                 $('.elfinder-dialog-edit').resize(function() {
