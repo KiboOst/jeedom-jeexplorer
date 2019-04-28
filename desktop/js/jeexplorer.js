@@ -14,7 +14,8 @@
  * along with Jeedom. If not, see <http://www.gnu.org/licenses/>.
  */
 
-$().ready(function() {
+$(function() {
+  CodeMirror.modeURL = "/3rdparty/codemirror/mode/%N/%N.js"
   var options = {
       url  : 'plugins/jeexplorer/3rdparty/elfinder/php/connector.minimal.php',
       lang : jeeXplorerConfig.lang,
@@ -42,25 +43,24 @@ $().ready(function() {
           editors : [
             {
               load : function(textarea) {
-                CodeMirror.modeURL = "/3rdparty/codemirror/mode/%N/%N.js"
                 self = this
                 this.myCodeMirror = CodeMirror.fromTextArea(textarea, {
-                  styleActiveLine: true,
-                  lineNumbers: true,
-                  lineWrapping: true,
-                  matchBrackets: true,
-                  autoRefresh: true,
-                  foldGutter: true,
-                  gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"]
-                })
+                    styleActiveLine: true,
+                    lineNumbers: true,
+                    lineWrapping: true,
+                    matchBrackets: true,
+                    autoRefresh: true,
+                    foldGutter: true,
+                    gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"]
+                  })
                 var editor = this.myCodeMirror
 
                 //Auto mode set:
                 var info, m, mode, spec;
-                if (! info) {
+                if (!info) {
                     info = CodeMirror.findModeByMIME(self.file.mime);
                 }
-                if (! info && (m = self.file.name.match(/.+\.([^.]+)$/))) {
+                if (!info && (m = self.file.name.match(/.+\.([^.]+)$/))) {
                     info = CodeMirror.findModeByExtension(m[1]);
                 }
                 if (info) {
@@ -72,12 +72,6 @@ $().ready(function() {
 
                 $(".cm-s-default").height('100%')
                 editor.setOption('theme', 'monokai')
-                editor.scrollIntoView({line:0, char:0}, 20)
-                editor.setOption("extraKeys", {
-                  "Ctrl-Y": cm => CodeMirror.commands.foldAll(cm),
-                  "Ctrl-I": cm => CodeMirror.commands.unfoldAll(cm)
-                })
-                if (jeeXplorerConfig.foldOnStart) CodeMirror.commands.foldAll(editor)
 
                 //expand on resize modal:
                 $('.elfinder-dialog-edit').resize(function() {
@@ -85,6 +79,17 @@ $().ready(function() {
                 })
                 $('.elfinder-dialog-active').width('75%')
                 $('.elfinder-dialog-active').css('left', '15%')
+
+                setTimeout(function(){
+                  editor.scrollIntoView({line:0, char:0}, 20)
+                  editor.setOption("extraKeys", {
+                    "Ctrl-Y": cm => CodeMirror.commands.foldAll(cm),
+                    "Ctrl-I": cm => CodeMirror.commands.unfoldAll(cm)
+                  })
+                  if (jeeXplorerConfig.foldOnStart) {
+                    CodeMirror.commands.foldAll(editor)
+                  }
+                }, 250)
               },
               close : function(textarea, instance) {
                 //this.myCodeMirror = null;
