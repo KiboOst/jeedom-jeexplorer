@@ -56,6 +56,12 @@ include_file('3rdparty', 'codemirror/lib/codemirror', 'js');
 			<input type="checkbox" class="configKey" data-l1key="rememberLastDir" />
 		</div>
 	</div>
+	<div class="form-group">
+		<label class="col-sm-3 col-xs-12 control-label">{{Collapser le code à l'ouverture}}</label>
+		<div class="col-sm-3 col-xs-12">
+			<input type="checkbox" class="configKey" data-l1key="foldOnStart" />
+		</div>
+	</div>
 	<br/>
 
 	<div class="form-group">
