@@ -6,6 +6,7 @@ if (!isConnect('admin')) {
 $plugin = plugin::byId('jeexplorer');
 $jeeXplorerConfig = array();
 $jeeXplorerConfig["lang"] = config::byKey('language', 'jeexplorer', 'fr');
+$jeeXplorerConfig["foldOnStart"] = config::byKey('foldOnStart', 'jeexplorer', '0');
 $jeeXplorerConfig["rememberLastDir"] = config::byKey('rememberLastDir', 'jeexplorer', '1');
 $jeeXplorerConfig["rememberLastDir"] = ($jeeXplorerConfig["rememberLastDir"] == "1" ? true : false);
 sendVarToJS('jeeXplorerConfig', $jeeXplorerConfig);
@@ -80,6 +81,16 @@ include_file('3rdparty/elfinder', 'elfinder.min', 'js', 'jeexplorer');
 
     .CodeMirror-dialog-top {
       background-color: rgb(40, 40, 40);;
+    }
+
+    .elfinder-dialog .CodeMirror-gutter,
+    .elfinder-dialog .CodeMirror-gutters,
+    .elfinder-dialog .CodeMirror-linenumber,
+    .elfinder-dialog .CodeMirror-foldgutter-open {
+      background: rgb(70,70,70) !important;
+    }
+    .elfinder-dialog .CodeMirror-foldgutter-folded {
+      background: rgb(55,55,55) !important;
     }
 </style>
 
