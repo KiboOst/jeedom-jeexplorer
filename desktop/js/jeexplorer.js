@@ -45,9 +45,13 @@ $().ready(function() {
                 CodeMirror.modeURL = "/3rdparty/codemirror/mode/%N/%N.js"
                 self = this
                 this.myCodeMirror = CodeMirror.fromTextArea(textarea, {
+                  styleActiveLine: true,
                   lineNumbers: true,
+                  lineWrapping: true,
                   matchBrackets: true,
-                  autoRefresh: true
+                  autoRefresh: true,
+                  foldGutter: true,
+                  gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"]
                 })
                 var editor = this.myCodeMirror
 
@@ -67,6 +71,13 @@ $().ready(function() {
                 }
 
                 $(".cm-s-default").height('100%')
+                editor.setOption('theme', 'monokai')
+                editor.scrollIntoView({line:0, char:0}, 20)
+                editor.setOption("extraKeys", {
+                  "Ctrl-Y": cm => CodeMirror.commands.foldAll(cm),
+                  "Ctrl-I": cm => CodeMirror.commands.unfoldAll(cm),
+                })
+
                 //expand on resize modal:
                 $('.elfinder-dialog-edit').resize(function() {
                   editor.refresh()
