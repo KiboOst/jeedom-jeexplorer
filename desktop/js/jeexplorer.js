@@ -86,7 +86,7 @@ $(function() {
                     "Ctrl-Y": cm => CodeMirror.commands.foldAll(cm),
                     "Ctrl-I": cm => CodeMirror.commands.unfoldAll(cm)
                   })
-                  if (jeeXplorerConfig.foldOnStart) {
+                  if (jeeXplorerConfig.foldOnStart == "1") {
                     CodeMirror.commands.foldAll(editor)
                   }
                 }, 250)
