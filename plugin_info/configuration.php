@@ -69,7 +69,7 @@ include_file('3rdparty', 'codemirror/lib/codemirror', 'js');
 		<label class="col-sm-3 col-xs-6 control-label"><span id="cmVersion" class="label label-info"></span></label>
 	</div>
 	<div class="form-group">
-		<label class="col-sm-3 col-xs-6 control-label">{{edFinder (JeeXplorer)}}</label>
+		<label class="col-sm-3 col-xs-6 control-label">{{elFinder (JeeXplorer)}}</label>
 		<label class="col-sm-3 col-xs-6 control-label"><span id="elfinderVersion" class="label label-info"></span></label>
 	</div>
 </fieldset>
