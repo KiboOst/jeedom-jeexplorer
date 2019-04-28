@@ -10,18 +10,32 @@ $jeeXplorerConfig["rememberLastDir"] = config::byKey('rememberLastDir', 'jeexplo
 $jeeXplorerConfig["rememberLastDir"] = ($jeeXplorerConfig["rememberLastDir"] == "1" ? true : false);
 sendVarToJS('jeeXplorerConfig', $jeeXplorerConfig);
 
-//core codemirror
+//Core CodeMirror:
 include_file('3rdparty', 'codemirror/lib/codemirror', 'js');
 include_file('3rdparty', 'codemirror/lib/codemirror', 'css');
 include_file('3rdparty', 'codemirror/addon/mode/loadmode', 'js');
 include_file('3rdparty', 'codemirror/mode/meta', 'js');
-
+//Core CodeMirror addons:
+include_file('3rdparty', 'codemirror/addon/selection/active-line', 'js');
 include_file('3rdparty', 'codemirror/addon/search/search', 'js');
 include_file('3rdparty', 'codemirror/addon/search/searchcursor', 'js');
 include_file('3rdparty', 'codemirror/addon/dialog/dialog', 'js');
 include_file('3rdparty', 'codemirror/addon/dialog/dialog', 'css');
 
-//elfinder
+include_file('3rdparty', 'codemirror/addon/fold/brace-fold', 'js');
+include_file('3rdparty', 'codemirror/addon/fold/comment-fold', 'js');
+include_file('3rdparty', 'codemirror/addon/fold/foldcode', 'js');
+include_file('3rdparty', 'codemirror/addon/fold/indent-fold', 'js');
+include_file('3rdparty', 'codemirror/addon/fold/markdown-fold', 'js');
+include_file('3rdparty', 'codemirror/addon/fold/xml-fold', 'js');
+include_file('3rdparty', 'codemirror/addon/fold/foldgutter', 'js');
+include_file('3rdparty', 'codemirror/addon/fold/foldgutter', 'css');
+
+
+//JeeXplorer addons:
+include_file('3rdparty', 'codemirror/theme/monokai', 'css', 'jeexplorer');
+
+//elFinder:
 include_file('3rdparty/elfinder', 'elfinder.min', 'css', 'jeexplorer');
 include_file('3rdparty/elfinder/themes/Material', 'theme', 'css', 'jeexplorer');
 include_file('3rdparty/elfinder', 'elfinder.min', 'js', 'jeexplorer');
@@ -56,8 +70,16 @@ include_file('3rdparty/elfinder', 'elfinder.min', 'js', 'jeexplorer');
       line-height: 14px;
     }
 
+    .elfinder-dialog {
+      font-family: "Roboto";
+    }
+    .elfinder-dialog .ui-button-text {
+      font-size: 12px;
+      text-transform: capitalize;
+    }
+
     .CodeMirror-dialog-top {
-      background-color: rgb(230, 230, 230);;
+      background-color: rgb(40, 40, 40);;
     }
 </style>
 
