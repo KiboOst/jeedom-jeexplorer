@@ -1061,6 +1061,7 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
   border-radius: 0;
   border: 0;
   padding: 5px 0;
+  overflow: hidden;
 }
 .elfinder-toolbar .elfinder-button-icon {
   font-size: 20px;
@@ -1109,7 +1110,7 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
 .elfinder .elfinder-button-search {
   margin: 0 10px;
   min-height: inherit;
-  overflow: hidden;
+  overflow: hidden !important;
 }
 .elfinder .elfinder-button-search .ui-icon {
   color: #fff !important;
