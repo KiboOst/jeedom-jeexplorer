@@ -82,7 +82,8 @@ $(function() {
                       CodeMirror.autoLoadMode(editor, mode);
                   }
 
-                  $(".cm-s-default").height('100%')
+                  //$(".cm-s-default").height('100%')
+                  $(".cm-s-default").style('height', '100%', 'important')
                   editor.setOption('theme', 'monokai')
 
                   //expand on resize modal:
@@ -124,4 +125,3 @@ $(window).resize(function() {
   $('#elfinder').css("width", $(window).width() - 30)
   $('#elfinder').css("height", $(window).height() - 80)
 })
-
