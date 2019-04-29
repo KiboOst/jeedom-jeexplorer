@@ -33,7 +33,7 @@ include_file('3rdparty', 'codemirror/lib/codemirror', 'js');
 		<label class="col-sm-3  col-xs-12 control-label">{{Langue de l'explorateur}}</label>
 		<div class="col-sm-3 col-xs-12">
 			<div class="dropdown dynDropdown">
-			<button class="btn btn-default dropdown-toggle configKey" type="button" data-toggle="dropdown" data-l1key="language" value="fr">
+			<button class="btn btn-default dropdown-toggle configKey" type="button" data-toggle="dropdown" data-l1key="language" value="fr" style="width:100%">
 				French<span class="caret"></span>
 			</button>
 			<ul class="dropdown-menu dropdown-menu-right">
