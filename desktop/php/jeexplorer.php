@@ -45,72 +45,11 @@ include_file('3rdparty/elfinder', 'elfinder.full', 'js', 'jeexplorer');
 
 <div id="elfinder" class=""></div>
 
-<style>
-    .CodeMirror pre,
-  .ui-dialog-content,
-  .ui-widget textarea {
-    font-size: 12px !important;
-  }
-
-  .CodeMirror-dialog-top {
-    background-color: rgb(40, 40, 40);;
-  }
-
-  .elfinder-dialog .ui-helper-clearfix .elfinder-cwd-icon:before {
-      display: none;
-      color: red !important;
-  }
-
-  .elfinder-dialog .elfinder-dialog-icon-confirm {
-      display: none;
-  }
-
-  .ui-dialog.elfinder-maximized {
-    top: 50px !important;
-    max-height: calc(100% - 60px) !important;
-    max-width: calc(100% - 30px) !important;
-  }
-
-  .ui-helper-reset {
-    line-height: 14px;
-  }
-
-  .elfinder-dialog {
-    font-family: "Roboto";
-  }
-  .elfinder-dialog .ui-button-text {
-    font-size: 12px;
-    text-transform: capitalize;
-  }
-
-  .elfinder-dialog .CodeMirror-gutter,
-  .elfinder-dialog .CodeMirror-gutters,
-  .elfinder-dialog .CodeMirror-linenumber,
-  .elfinder-dialog .CodeMirror-foldgutter-open {
-    background: rgb(70,70,70) !important;
-  }
-  .elfinder-dialog .CodeMirror-foldgutter-folded {
-    background: rgb(55,55,55) !important;
-  }
-
-  .elfinder-dialog-title {font-family:"Roboto"; font-size:12px;}
-
-  .elfinder-dialog .ui-icon-plusthick { background-position: -32px -127px!important; color:rgb(60,60,60)!important;}
-  .elfinder-dialog .ui-icon-minusthick { background-position: -63px -127px!important; color:rgb(60,60,60)!important;}
-  .elfinder-dialog .ui-icon-closethick { background-position: -96px -128px!important; color:rgb(60,60,60)!important;}
-  .elfinder-dialog .ui-icon-arrowreturnthick-1-s { background-position: -49px -62px!important; color:rgb(60,60,60)!important;}
-  .elfinder-dialog .ui-helper-clearfix::after {height: 2px;}
-
-  .elfinder-button-sort-menu,
-  .elfinder-button-menu-item {
-    background-color: rgb(255,255,255) !important;
-  }
-</style>
-
 <?php
   $plufinSrc = '/plugins/jeexplorer/3rdparty/elfinder/js/i18n/elfinder.' . $jeeXplorerConfig["lang"] .'.js';
   echo '<script src="'.$plufinSrc.'"></script>';
 
+  include_file('desktop', 'jeexplorer', 'css', 'jeexplorer');
   include_file('desktop', 'jeexplorer', 'js', 'jeexplorer');
   include_file('core', 'plugin.template', 'js');
 ?>
