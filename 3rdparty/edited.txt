@@ -1,0 +1,12 @@
+
+__elfinder/themes/material
+
+__elfinder/php/connector.minimal.php:
+
+config !
+
+__elfinder/js/elfinder.full.js:
+
+$.fn.elfindercontextmenu = function(fm) { ->
+		item = function(label, icon, callback, opts) {
+              if (label.startsWith('Editor ')) label = fm.i18n('cmdedit');

@@ -39,7 +39,7 @@ include_file('3rdparty', 'codemirror/theme/monokai', 'css', 'jeexplorer');
 //elFinder:
 include_file('3rdparty/elfinder', 'elfinder.min', 'css', 'jeexplorer');
 include_file('3rdparty/elfinder/themes/Material', 'theme', 'css', 'jeexplorer');
-include_file('3rdparty/elfinder', 'elfinder.min', 'js', 'jeexplorer');
+include_file('3rdparty/elfinder', 'elfinder.full', 'js', 'jeexplorer');
 
 ?>
 
