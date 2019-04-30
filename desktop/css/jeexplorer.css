@@ -11,7 +11,6 @@
 
 .elfinder-dialog .ui-helper-clearfix .elfinder-cwd-icon:before {
     display: none;
-    color: red !important;
 }
 
 .elfinder-dialog .elfinder-dialog-icon-confirm {
@@ -52,15 +51,28 @@
   background: rgb(55,55,55) !important;
 }
 
-.elfinder-dialog-title {font-family:"Roboto"; font-size:12px;}
-
-.elfinder-dialog .ui-icon-plusthick { background-position: -32px -127px!important; color:rgb(60,60,60)!important;}
-.elfinder-dialog .ui-icon-minusthick { background-position: -63px -127px!important; color:rgb(60,60,60)!important;}
-.elfinder-dialog .ui-icon-closethick { background-position: -96px -128px!important; color:rgb(60,60,60)!important;}
-.elfinder-dialog .ui-icon-arrowreturnthick-1-s { background-position: -49px -62px!important; color:rgb(60,60,60)!important;}
-.elfinder-dialog .ui-helper-clearfix::after {height: 2px;}
+.elfinder-dialog-title {
+  font-family:"Roboto";
+  font-size:14px;
+  font-weight: normal !important;
+  color: rgb(200,200,200) !important;
+}
 
 .elfinder-button-sort-menu,
 .elfinder-button-menu-item {
   background-color: rgb(255,255,255) !important;
 }
+
+.elfinder-dialog .ui-dialog-titlebar {
+  min-height: 18px !important;
+  line-height: 18px;
+  background-color: rgb(20,35,50) !important;
+}
+.elfinder-dialog .ui-icon {
+	width: 16px;
+	height: 16px;
+	background-image: none !important;
+  text-indent: 0 !important;
+  margin: 2px 0 !important;
+}
+
