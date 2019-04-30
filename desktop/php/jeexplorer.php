@@ -17,6 +17,7 @@ include_file('3rdparty', 'codemirror/lib/codemirror', 'css');
 include_file('3rdparty', 'codemirror/addon/mode/loadmode', 'js');
 include_file('3rdparty', 'codemirror/mode/meta', 'js');
 //Core CodeMirror addons:
+include_file('3rdparty', 'codemirror/addon/edit/matchbrackets', 'js');
 include_file('3rdparty', 'codemirror/addon/selection/active-line', 'js');
 include_file('3rdparty', 'codemirror/addon/search/search', 'js');
 include_file('3rdparty', 'codemirror/addon/search/searchcursor', 'js');
