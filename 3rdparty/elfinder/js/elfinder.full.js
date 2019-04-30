@@ -13815,6 +13815,7 @@ $.fn.elfindercontextmenu = function(fm) {
 			types = Object.assign({}, fm.options.contextmenu),
 			tpl     = '<div class="'+cmItem+'{className}"><span class="elfinder-button-icon {icon} elfinder-contextmenu-icon"{style}/><span>{label}</span></div>',
 			item = function(label, icon, callback, opts) {
+              if (label.startsWith('Editor ')) label = fm.i18n('cmdedit');
 				var className = '',
 					style = '',
 					iconClass = '',
