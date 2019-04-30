@@ -38,6 +38,9 @@
   font-size: 12px;
   text-transform: capitalize;
 }
+.ui-dialog-titlebar .elfinder-titlebar-button-right {
+  opacity: 1 !important;
+}
 
 .elfinder-dialog .CodeMirror-gutter,
 .elfinder-dialog .CodeMirror-gutters,
