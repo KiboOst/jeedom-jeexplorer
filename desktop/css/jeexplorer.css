@@ -76,3 +76,29 @@
   margin: 2px 0 !important;
 }
 
+
+/* Folding */
+.CodeMirror-foldmarker {
+  color: green;
+  text-shadow: none;
+  font-family: arial;
+  line-height: .3;
+  cursor: pointer;
+  font-size: 18px;
+  position:relative;
+  top: 1px;
+}
+.CodeMirror-foldgutter {
+  width: .7em;
+}
+.CodeMirror-foldgutter-open,
+.CodeMirror-foldgutter-folded {
+  cursor: pointer;
+  transform: scale(1.4) !important;
+}
+.CodeMirror-foldgutter-open:after {
+  content: "\25BE";
+}
+.CodeMirror-foldgutter-folded:after {
+  content: "\25B8";
+}
