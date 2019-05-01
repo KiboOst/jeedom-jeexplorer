@@ -1,5 +1,5 @@
 <?php
-
+@session_start();
 error_reporting(0); // Set E_ALL for debuging
 
 // // To Enable(true) handling of PostScript files by ImageMagick
@@ -17,7 +17,7 @@ require './autoload.php';
 // ===============================================
 
 // Enable FTP connector netmount
-elFinder::$netDrivers['ftp'] = 'FTP';
+// elFinder::$netDrivers['ftp'] = 'FTP';
 // ===============================================
 
 // // Required for Dropbox network mount
@@ -105,6 +105,7 @@ elFinder::$netDrivers['ftp'] = 'FTP';
  * @param  string    $relpath file path relative to volume root directory started with directory separator
  * @return bool|null
  **/
+
 function access($attr, $path, $data, $volume, $isDir, $relpath) {
 	$basename = basename($path);
 	return $basename[0] === '.'                  // if file/folder begins with '.' (dot)
@@ -112,7 +113,6 @@ function access($attr, $path, $data, $volume, $isDir, $relpath) {
 		? !($attr == 'read' || $attr == 'write') // set read+write to false, other (locked+hidden) set to true
 		:  null;                                 // else elFinder decide it itself
 }
-
 
 // Documentation for connector options:
 // https://github.com/Studio-42/elFinder/wiki/Connector-configuration-options
