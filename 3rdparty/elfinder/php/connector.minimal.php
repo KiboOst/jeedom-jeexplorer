@@ -118,15 +118,17 @@ function access($attr, $path, $data, $volume, $isDir, $relpath) {
 // https://github.com/Studio-42/elFinder/wiki/Connector-configuration-options
 $opts = array(
   'roots' => array(
-                   array(
-                         'driver'        => 'LocalFileSystem',   // driver for accessing file system (REQUIRED)
-                         'path'          => dirname(__FILE__) . '/../../../../../',         // path to files (REQUIRED)
-                         'URL'           => dirname($_SERVER['PHP_SELF']) . '/../../../../../', // URL to files (REQUIRED)
-                         'accessControl' => 'access',             // disable and hide dot starting files (OPTIONAL)
-                         'startPath'     => dirname(__FILE__) . '/../../../../../'
-                         )
-                   )
-  );
+    array(
+      'driver'        => 'LocalFileSystem',   // driver for accessing file system (REQUIRED)
+      'path'          => dirname(__FILE__) . '/../../../../../',         // path to files (REQUIRED)
+      'URL'           => dirname($_SERVER['PHP_SELF']) . '/../../../../../', // URL to files (REQUIRED)
+      'accessControl' => 'access',             // disable and hide dot starting files (OPTIONAL)
+      'startPath'     => dirname(__FILE__) . '/../../../../../',
+      'tmpPath'       => dirname(__FILE__) . '/../../../jeexTmp',
+      'utf8fix'       => true
+    )
+  )
+);
 
 // run elFinder
 $connector = new elFinderConnector(new elFinder($opts));
