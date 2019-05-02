@@ -150,8 +150,8 @@
 }
 .elfinder .ui-icon,
 .elfinder-button-icon,
-.ui-widget-header .ui-icon,
-.ui-widget-content .ui-icon {
+.elfinder .ui-widget-header .ui-icon,
+.elfinder .ui-widget-content .ui-icon {
   font: normal normal normal 14px/1 material;
   background-image: inherit;
   text-indent: inherit;
