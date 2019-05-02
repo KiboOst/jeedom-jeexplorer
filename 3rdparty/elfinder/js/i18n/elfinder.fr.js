@@ -182,7 +182,7 @@
 			'btnAll'    : 'Tous',       // from v2.1 added 22.5.2015
 			'btnMime'   : 'Type MIME', // from v2.1 added 22.5.2015
 			'btnFileName':'Nom du fichier',  // from v2.1 added 22.5.2015
-			'btnSaveClose': 'Enregistrer & Ferme', // from v2.1 added 12.6.2015
+			'btnSaveClose': 'Sauvegarder & Fermer', // from v2.1 added 12.6.2015
 			'btnBackup' : 'Sauvegarde', // fromv2.1 added 28.11.2015
 			'btnRename'    : 'Renommer',      // from v2.1.24 added 6.4.2017
 			'btnRenameAll' : 'Renommer (tous)', // from v2.1.24 added 6.4.2017
