@@ -26,7 +26,7 @@ $(function() {
       sortDirect: 'kindDirsFirst',
       contextmenu: {
         cwd: ['reload', 'back', '|', 'upload', 'mkdir', 'mkfile', 'paste', '|', 'info'],
-        files: ['edit', '|', 'open', 'rename' ,'|', 'getfile' , 'download', '|', 'copy', 'cut', 'paste', 'duplicate', '|','rm', '|', 'archive', 'extract', '|', 'info', 'places']
+        files: ['edit', '|', 'rename' ,'|', 'getfile' , 'download', '|', 'copy', 'cut', 'paste', 'duplicate', '|','rm', '|', 'archive', 'extract', '|', 'info', 'places']
       },
       uiOptions: {
         toolbar: [
