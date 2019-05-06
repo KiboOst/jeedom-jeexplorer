@@ -5,6 +5,11 @@
   font-size: 12px !important;
 }
 
+.CodeMirror {
+  height: auto;
+  background: rgb(39,40,34) !important;
+}
+
 .CodeMirror-dialog-top {
   background-color: rgb(40, 40, 40);;
 }
