@@ -61,11 +61,11 @@ include_file('3rdparty', 'codemirror/lib/codemirror', 'js');
 
 	<div class="form-group">
 		<label class="col-sm-3 col-xs-6 control-label">{{CodeMiror (Core)}}</label>
-		<label class="col-sm-3 col-xs-6 control-label"><span id="cmVersion" class="label label-info"></span></label>
+		<label class="col-sm-3 col-xs-6"><span id="cmVersion" class="label label-info"></span></label>
 	</div>
 	<div class="form-group">
 		<label class="col-sm-3 col-xs-6 control-label">{{elFinder (JeeXplorer)}}</label>
-		<label class="col-sm-3 col-xs-6 control-label"><span id="elfinderVersion" class="label label-info"></span></label>
+		<label class="col-sm-3 col-xs-6"><span id="elfinderVersion" class="label label-info"></span></label>
 	</div>
 </fieldset>
 </form>
