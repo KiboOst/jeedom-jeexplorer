@@ -23,7 +23,7 @@ function jeexplorer_install() {
 }
 
 function jeexplorer_update() {
-
+  console.log('jeexplorer_update')
 }
 
 function jeexplorer_remove() {
