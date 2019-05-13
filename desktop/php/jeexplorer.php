@@ -8,6 +8,7 @@ $jeeXplorerConfig = array();
 $jeeXplorerConfig["lang"] = config::byKey('language', 'jeexplorer', 'fr');
 $jeeXplorerConfig["foldOnStart"] = config::byKey('foldOnStart', 'jeexplorer', '0');
 $jeeXplorerConfig["rememberLastDir"] = config::byKey('rememberLastDir', 'jeexplorer', '1');
+$jeeXplorerConfig["showWarning"] = config::byKey('showWarning', 'jeexplorer', '1');
 $jeeXplorerConfig["rememberLastDir"] = ($jeeXplorerConfig["rememberLastDir"] == "1" ? true : false);
 sendVarToJS('jeeXplorerConfig', $jeeXplorerConfig);
 
