@@ -148,11 +148,24 @@ $(function() {
   }
   var elfinder = $('#elfinder').elfinder(options).elfinder('instance')
   $('#elfinder').css("height", $(window).height() - 80)
+  elfinder.one('init', function(event) { killTooltips() })
+  elfinder.bind('open', function(event) { killTooltips() })
 });
+
+function killTooltips() {
+  setTimeout(function() {
+    try {
+      $('#elfinder .tooltipstered').tooltipster('destroy')
+    } catch(error) {}
+    try {
+      $('#elfinder [title]').removeAttr('title')
+    } catch(error) {}
+  }, 500);  
+}
+
 
 //resize explorer in browser window:
 $(window).resize(function() {
   $('#elfinder').css("width", $(window).width() - 30)
   $('#elfinder').css("height", $(window).height() - 80)
 })
-
