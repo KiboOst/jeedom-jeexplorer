@@ -5,6 +5,10 @@
   font-size: 12px !important;
 }
 
+.CodeMirror pre {
+  background: rgb(39,40,34) !important;
+}
+
 .CodeMirror {
   height: auto;
   background: rgb(39,40,34) !important;
