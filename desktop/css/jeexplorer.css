@@ -1,11 +1,14 @@
+.elfinder-dialog-edit .elfinder-edit-extras select {
+  width : 150px !important;
+}
 
-.CodeMirror pre,
+.elfinder-dialog-edit .CodeMirror pre,
 .ui-dialog-content,
 .ui-widget textarea {
   font-size: 12px !important;
 }
 
-.CodeMirror pre {
+.elfinder-dialog-edit .CodeMirror pre {
   background: rgb(39,40,34) !important;
 }
 
@@ -78,9 +81,9 @@
   background-color: rgb(20,35,50) !important;
 }
 .elfinder-dialog .ui-icon {
-	width: 16px;
-	height: 16px;
-	background-image: none !important;
+  width: 16px;
+  height: 16px;
+  background-image: none !important;
   text-indent: 0 !important;
   margin: 2px 0 !important;
 }
