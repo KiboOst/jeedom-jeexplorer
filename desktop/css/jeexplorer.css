@@ -9,16 +9,11 @@
 }
 
 .elfinder-dialog-edit .CodeMirror pre {
-  background: rgb(39,40,34) !important;
-}
-
-.CodeMirror {
-  height: auto;
-  background: rgb(39,40,34) !important;
+  background: initial !important;
 }
 
 .CodeMirror-dialog-top {
-  background-color: rgb(40, 40, 40);;
+  background-color: rgb(40, 40, 40);
 }
 
 .elfinder-dialog .ui-helper-clearfix .elfinder-cwd-icon:before {
