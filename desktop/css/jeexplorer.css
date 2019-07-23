@@ -8,6 +8,52 @@
   font-size: 12px !important;
 }
 
+
+.elfinder-dialog-title {
+  color: rgb(var(--bg-color)) !important;
+  font-weight: bold;
+}
+.elfinder-contextmenu-item {
+  color: rgb(75, 75, 75) !important;
+  font-size: 14px;
+}
+.elfinder-cwd-wrapper {
+  color: rgb(115, 115, 115) !important;
+}
+
+#elfinder,
+.ui-widget-content.elfinder-buttonset {
+  background-image: none !important;
+  background: none !important;
+}
+
+.elfinder-cwd-view-list table {
+  background-color: rgb(75, 75, 75) !important;
+  color: rgb(240, 240, 240);
+}
+.elfinder-cwd-view-list table tbody.elfinder-cwd-fixheader tr:hover,
+.elfinder-cwd-view-list table tbody.elfinder-cwd-fixheader tr:nth-child(odd):hover,
+.elfinder-cwd-view-list table tbody.elfinder-cwd-fixheader tr:nth-child(even):hover{
+  background-color: rgb(160, 160, 160) !important;
+}
+
+.elfinder-cwd-view-list table > tbody tr,
+.elfinder-cwd-view-list table:not(.tableCmd) > tbody tr:nth-child(odd),
+.elfinder-cwd-view-list table:not(.tableCmd) > tbody tr:nth-child(even) {
+  background-color: rgb(75, 75, 75) !important;
+}
+
+#elfinder .elfinder-toolbar > .elfinder-button-search > input {
+  background-color: rgb(75, 75, 75) !important;
+}
+#elfinder .elfinder-toolbar > .elfinder-button-search > span.ui-icon {
+  background-image: none !important
+}
+
+#elfinder .elfinder-cwd-filename > textarea {
+  font-size: 14px !important;
+}
+
 .elfinder-dialog-edit .CodeMirror pre {
   background: initial !important;
 }
