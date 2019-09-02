@@ -1,3 +1,8 @@
+
+.elfinder .ui-widget-content {
+  font-family: "Roboto";
+}
+
 .elfinder-dialog-edit .elfinder-edit-extras select {
   width : 150px !important;
 }
@@ -7,7 +12,6 @@
 .ui-widget textarea {
   font-size: 12px !important;
 }
-
 
 .elfinder-dialog-title {
   color: rgb(var(--bg-color)) !important;
@@ -130,8 +134,12 @@
 }
 
 
+/* CodeMirror */
+[data-page="jeexplorer"] .CodeMirror-code { background: rgb(35,35,35) !important; }
+[data-page="jeexplorer"] .CodeMirror-selected { background: rgba(65,65,65,1) !important; }
+
 /* Folding */
-.CodeMirror-foldmarker {
+[data-page="jeexplorer"] .CodeMirror-foldmarker {
   color: green;
   text-shadow: none;
   font-family: arial;
@@ -141,17 +149,17 @@
   position:relative;
   top: 1px;
 }
-.CodeMirror-foldgutter {
+[data-page="jeexplorer"] .CodeMirror-foldgutter {
   width: .7em;
 }
-.CodeMirror-foldgutter-open,
-.CodeMirror-foldgutter-folded {
+[data-page="jeexplorer"] .CodeMirror-foldgutter-open,
+[data-page="jeexplorer"] .CodeMirror-foldgutter-folded {
   cursor: pointer;
   transform: scale(1.4) !important;
 }
-.CodeMirror-foldgutter-open:after {
+[data-page="jeexplorer"] .CodeMirror-foldgutter-open:after {
   content: "\25BE";
 }
-.CodeMirror-foldgutter-folded:after {
+[data-page="jeexplorer"] .CodeMirror-foldgutter-folded:after {
   content: "\25B8";
 }
