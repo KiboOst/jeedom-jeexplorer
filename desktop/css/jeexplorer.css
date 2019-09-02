@@ -1,6 +1,11 @@
 
+.elfinder-dialog,
 .elfinder .ui-widget-content {
   font-family: "Roboto";
+}
+.elfinder-dialog .ui-dialog-buttonset .ui-button-text {
+  font-family: "Roboto";
+  text-transform: capitalize;
 }
 
 .elfinder-dialog-edit .elfinder-edit-extras select {
@@ -87,13 +92,6 @@
   line-height: 12.5px;
 }
 
-.elfinder-dialog {
-  font-family: "Roboto";
-}
-.elfinder-dialog .ui-button-text {
-  font-size: 12px;
-  text-transform: capitalize;
-}
 .ui-dialog-titlebar .elfinder-titlebar-button-right {
   opacity: 1 !important;
 }
