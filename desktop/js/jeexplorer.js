@@ -147,7 +147,10 @@ $(function() {
 	  }
   }
   var elfinder = $('#elfinder').elfinder(options).elfinder('instance')
+  
   $('#elfinder').css("height", $(window).height() - 80)
+  $('.ui-state-default.elfinder-navbar.ui-resizable').css('height', '100%')
+  
   elfinder.one('init', function(event) { killTooltips() })
   elfinder.bind('open', function(event) { killTooltips() })
 });
