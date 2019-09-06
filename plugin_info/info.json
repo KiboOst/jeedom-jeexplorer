@@ -4,7 +4,7 @@
     "description" : "Explorateur / éditeur de fichiers pour Jeedom",
     "licence" : "AGPL",
     "author" : "KiboOst",
-    "require" : "3.0",
+    "require" : "4.0",
     "category" : "programming",
     "hasDependency" : false,
     "hasOwnDeamon" : false,
