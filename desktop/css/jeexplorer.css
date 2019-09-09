@@ -22,7 +22,9 @@
 }
 .elfinder-cwd-wrapper {
   color: rgb(115, 115, 115) !important;
+  line-height: 12px !important;
 }
+
 
 .elfinder-cwd-view-list table {
   background-color: rgb(75, 75, 75) !important;
