@@ -1,8 +1,12 @@
 
-.elfinder-dialog,
-.elfinder .ui-widget-content {
-  font-family: "Roboto";
+#elfinder .elfinder-edit-editor .CodeMirror {
+  font-size: 12px !important;
 }
+#elfinder {
+  background-image: none !important;
+  background: none !important;
+}
+
 .elfinder-dialog .ui-dialog-buttonset .ui-button-text {
   font-family: "Roboto";
   text-transform: capitalize;
@@ -12,24 +16,12 @@
   width : 150px !important;
 }
 
-.elfinder-dialog-edit .CodeMirror pre,
-.ui-dialog-content,
-.ui-widget textarea {
-  font-size: 12px !important;
-}
-
 .elfinder-contextmenu-item {
   color: rgb(75, 75, 75) !important;
   font-size: 14px;
 }
 .elfinder-cwd-wrapper {
   color: rgb(115, 115, 115) !important;
-}
-
-#elfinder,
-.ui-widget-content.elfinder-buttonset {
-  background-image: none !important;
-  background: none !important;
 }
 
 .elfinder-cwd-view-list table {
@@ -67,12 +59,9 @@
   background-color: rgb(40, 40, 40);
 }
 
-.elfinder-dialog .ui-helper-clearfix .elfinder-cwd-icon:before {
-    display: none;
-}
-
+.elfinder-dialog .ui-helper-clearfix .elfinder-cwd-icon:before,
 .elfinder-dialog .elfinder-dialog-icon-confirm {
-    display: none;
+  display: none;
 }
 
 .ui-dialog.elfinder-maximized {
@@ -83,9 +72,6 @@
 
 .elfinder-navbar-wrapper {
   line-height: 10px !important;
-}
-.ui-helper-reset {
-  line-height: 12.5px;
 }
 
 .ui-dialog-titlebar .elfinder-titlebar-button-right {
@@ -98,9 +84,6 @@
 .elfinder-dialog .CodeMirror-foldgutter-open {
   background: rgb(70,70,70) !important;
 }
-.elfinder-dialog .CodeMirror-foldgutter-folded {
-  background: rgb(55,55,55) !important;
-}
 
 .elfinder-button-sort-menu,
 .elfinder-button-menu-item {
@@ -108,7 +91,6 @@
 }
 
 .elfinder-dialog .ui-dialog-titlebar {
-  height: 28px;
   vertical-align: middle;
   background-color: rgb(85,85,85) !important;
 }
@@ -125,39 +107,28 @@
 }
 .elfinder-dialog .ui-icon {
   width: 16px;
-  height: 16px;
   background-image: none !important;
   text-indent: 0 !important;
   margin: 2px 0 !important;
 }
 
-
 /* CodeMirror */
 [data-page="jeexplorer"] .CodeMirror-code { background: rgb(35,35,35) !important; }
 [data-page="jeexplorer"] .CodeMirror-selected { background: rgba(65,65,65,1) !important; }
 
-/* Folding */
 [data-page="jeexplorer"] .CodeMirror-foldmarker {
   color: green;
   text-shadow: none;
   font-family: arial;
   line-height: .3;
-  cursor: pointer;
   font-size: 18px;
   position:relative;
   top: 1px;
+  cursor: pointer !important;
 }
-[data-page="jeexplorer"] .CodeMirror-foldgutter {
-  width: .7em;
-}
+
 [data-page="jeexplorer"] .CodeMirror-foldgutter-open,
 [data-page="jeexplorer"] .CodeMirror-foldgutter-folded {
   cursor: pointer;
-  transform: scale(1.4) !important;
-}
-[data-page="jeexplorer"] .CodeMirror-foldgutter-open:after {
-  content: "\25BE";
-}
-[data-page="jeexplorer"] .CodeMirror-foldgutter-folded:after {
-  content: "\25B8";
+  transform: scale(1.6) translate(-1.5px,0) !important;
 }
