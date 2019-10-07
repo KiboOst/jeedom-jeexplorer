@@ -147,10 +147,10 @@ $(function() {
 	  }
   }
   var elfinder = $('#elfinder').elfinder(options).elfinder('instance')
-  
+
   $('#elfinder').css("height", $(window).height() - 80)
   $('.ui-state-default.elfinder-navbar.ui-resizable').css('height', '100%')
-  
+
   elfinder.one('init', function(event) { killTooltips() })
   elfinder.bind('open', function(event) { killTooltips() })
 });
@@ -158,12 +158,12 @@ $(function() {
 function killTooltips() {
   setTimeout(function() {
     try {
-      $('#elfinder .tooltipstered').tooltipster('destroy')
+      $('.elfinder-workzone .tooltipstered').tooltipster('destroy')
     } catch(error) {}
     try {
-      $('#elfinder [title]').removeAttr('title')
+      $('.elfinder-workzone [title]').removeAttr('title')
     } catch(error) {}
-  }, 500);  
+  }, 500);
 }
 
 
