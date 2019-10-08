@@ -45,130 +45,135 @@ $(function() {
 		})
 	}
 
-  CodeMirror.modeURL = "/3rdparty/codemirror/mode/%N/%N.js"
-  var options = {
-	  url: 'plugins/jeexplorer/3rdparty/elfinder/php/connector.minimal.php',
-	  lang: jeeXplorerConfig.lang,
-	  startPath: '',
-	  rememberLastDir: jeeXplorerConfig.rememberLastDir,
-	  defaultView: 'list',
-	  sort: 'kindDirsFirst',
-	  sortDirect: 'kindDirsFirst',
-	  contextmenu: {
+	CodeMirror.modeURL = "/3rdparty/codemirror/mode/%N/%N.js"
+	var options = {
+		url: 'plugins/jeexplorer/3rdparty/elfinder/php/connector.minimal.php',
+		lang: jeeXplorerConfig.lang,
+		startPath: '',
+		rememberLastDir: jeeXplorerConfig.rememberLastDir,
+		defaultView: 'list',
+		sort: 'kindDirsFirst',
+		sortDirect: 'kindDirsFirst',
+		contextmenu: {
 		cwd: ['reload', 'back', '|', 'upload', 'mkdir', 'mkfile', 'paste', '|', 'info'],
 		files: ['edit', '|', 'rename' ,'|', 'getfile' , 'download', '|', 'copy', 'cut', 'paste', 'duplicate', '|','rm', '|', 'archive', 'extract', '|', 'info', 'places']
-	  },
-	  uiOptions: {
+		},
+		uiOptions: {
 		toolbar: [
-		  ['back', 'forward'],
-		  ['reload', 'sort'],
-		  ['home', 'up'],
-		  ['mkdir', 'mkfile', 'upload','download'],
-		  ['info'],
-		  ['copy', 'cut', 'paste'],
-		  ['edit','duplicate', 'rename', 'rm'],
-		  ['extract', 'archive'],
-		  ['search'],
-		  ['view']
+			['back', 'forward'],
+			['reload', 'sort'],
+			['home', 'up'],
+			['mkdir', 'mkfile', 'upload','download'],
+			['info'],
+			['copy', 'cut', 'paste'],
+			['edit','duplicate', 'rename', 'rm'],
+			['extract', 'archive'],
+			['search'],
+			['view']
 		]
-	  },
-	  handlers:
-	  {
-		  dblclick: function(event, elfinderInstance)
-		  {
-			  elfinderInstance.exec('edit')
-			  return false
-		  }
-	  },
-	  commandsOptions: {
+		},
+		handlers:
+		{
+			dblclick: function(event, elfinderInstance)
+			{
+				elfinderInstance.exec('edit')
+				return false
+			}
+		},
+		commandsOptions: {
 		edit: {
 			editors: [
-			  {
+				{
 				load : function(textarea) {
-				  self = this
-				  this.myCodeMirror = CodeMirror.fromTextArea(textarea, {
-					  styleActiveLine: true,
-					  lineNumbers: true,
-					  lineWrapping: true,
-					  matchBrackets: true,
-					  autoRefresh: true,
-					  foldGutter: true,
-					  gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"]
+					self = this
+					var elfinderInstance = $('#elfinder').elfinder(options).elfinder('instance')
+					var fileUrl = elfinderInstance.url(self.file.hash)
+					fileUrl = fileUrl.replace('/plugins/jeexplorer/3rdparty/elfinder/php/../../../../..', '')
+					$('.elfinder-dialog-active .elfinder-dialog-title').html(fileUrl)
+
+					this.myCodeMirror = CodeMirror.fromTextArea(textarea, {
+						styleActiveLine: true,
+						lineNumbers: true,
+						lineWrapping: true,
+						matchBrackets: true,
+						autoRefresh: true,
+						foldGutter: true,
+						gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"]
 					})
-				  var editor = this.myCodeMirror
+					var editor = this.myCodeMirror
 
-				  //Auto mode set:
-				  var info, m, mode, spec;
-				  if (!info) {
-					  info = CodeMirror.findModeByMIME(self.file.mime);
-				  }
-				  if (!info && (m = self.file.name.match(/.+\.([^.]+)$/))) {
-					  info = CodeMirror.findModeByExtension(m[1]);
-				  }
-				  if (info) {
-					  mode = info.mode;
-					  spec = info.mime;
-					  editor.setOption('mode', spec);
-					  CodeMirror.autoLoadMode(editor, mode);
-				  }
+					//Auto mode set:
+					var info, m, mode, spec;
+					if (!info) {
+						info = CodeMirror.findModeByMIME(self.file.mime);
+					}
+					if (!info && (m = self.file.name.match(/.+\.([^.]+)$/))) {
+						info = CodeMirror.findModeByExtension(m[1]);
+					}
+					if (info) {
+						mode = info.mode;
+						spec = info.mime;
+						editor.setOption('mode', spec);
+						CodeMirror.autoLoadMode(editor, mode);
+					}
 
-				  //$(".cm-s-default").height('100%')
-				  $(".cm-s-default").style('height', '100%', 'important')
-				  editor.setOption('theme', 'monokai')
+					//$(".cm-s-default").height('100%')
+					$(".cm-s-default").style('height', '100%', 'important')
+					editor.setOption('theme', 'monokai')
 
-				  //expand on resize modal:
-				  $('.elfinder-dialog-edit').resize(function() {
+					//expand on resize modal:
+					$('.elfinder-dialog-edit').resize(function() {
 					editor.refresh()
-				  })
-				  $('.elfinder-dialog-active').width('75%')
-				  $('.elfinder-dialog-active').css('left', '15%')
+					})
+					$('.elfinder-dialog-active').width('75%')
+					$('.elfinder-dialog-active').css('left', '15%')
 
-				  setTimeout(function(){
+					setTimeout(function(){
 					editor.scrollIntoView({line:0, char:0}, 20)
 					editor.setOption("extraKeys", {
-					  "Ctrl-Y": cm => CodeMirror.commands.foldAll(cm),
-					  "Ctrl-I": cm => CodeMirror.commands.unfoldAll(cm)
+						"Ctrl-Y": cm => CodeMirror.commands.foldAll(cm),
+						"Ctrl-I": cm => CodeMirror.commands.unfoldAll(cm)
 					})
 					if (jeeXplorerConfig.foldOnStart == "1") {
-					  CodeMirror.commands.foldAll(editor)
+						CodeMirror.commands.foldAll(editor)
 					}
-				  }, 250)
+					}, 250)
 				},
 				close : function(textarea, instance) {
-				  //this.myCodeMirror = null;
+					//this.myCodeMirror = null;
 				},
 				save : function(textarea, editor) {
-				  textarea.value = this.myCodeMirror.getValue();
-				  //this.myCodeMirror = null;
-				  }
-			  }
+					textarea.value = this.myCodeMirror.getValue();
+					//this.myCodeMirror = null;
+					}
+				}
 			]
 		},
-	  }
-  }
-  var elfinder = $('#elfinder').elfinder(options).elfinder('instance')
+		}
+	}
+	var elfinder = $('#elfinder').elfinder(options).elfinder('instance')
 
-  $('#elfinder').css("height", $(window).height() - 80)
-  $('.ui-state-default.elfinder-navbar.ui-resizable').css('height', '100%')
+	$('#elfinder').css("height", $(window).height() - 80)
+	$('.ui-state-default.elfinder-navbar.ui-resizable').css('height', '100%')
 
-  elfinder.one('init', function(event) { killTooltips() })
-  elfinder.bind('open', function(event) { killTooltips() })
+	elfinder.one('init', function(event) { killTooltips() })
+	elfinder.bind('open', function(event) { killTooltips() })
 });
 
 function killTooltips() {
-  setTimeout(function() {
-    try {
-      $('.elfinder-workzone .tooltipstered').tooltipster('destroy')
-    } catch(error) {}
-    try {
-      $('.elfinder-workzone [title]').removeAttr('title')
-    } catch(error) {}
-  }, 500);
+	setTimeout(function() {
+	try {
+		$('.elfinder-workzone .tooltipstered').tooltipster('destroy')
+	} catch(error) {}
+	try {
+		$('.elfinder-workzone [title]').removeAttr('title')
+	} catch(error) {}
+	}, 500);
 }
 
 
 //resize explorer in browser window:
 $(window).resize(function() {
-  $('#elfinder').css("width", $(window).width() - 30)
-  $('#elfinder').css("height", $(window).height() - 80)
+	$('#elfinder').css("width", $(window).width() - 30)
+	$('#elfinder').css("height", $(window).height() - 80)
 })
