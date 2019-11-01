@@ -12,7 +12,7 @@
     "changelog" : "https://kiboost.github.io/jeedom_docs/plugins/jeexplorer/fr_FR/changelog.html",
     "documentation" : "https://kiboost.github.io/jeedom_docs/plugins/jeexplorer/fr_FR/",
     "language" : ["fr_FR","en_US","de_DE","sp_SP","ru_RU","it_IT"],
-    "compatibility" : ["miniplus","smart","rpi","docker","diy"],
+    "compatibility" : ["miniplus","smart","rpi","docker","diy","v4"],
     "link" : {
         "forum": "https://www.jeedom.com/forum/viewtopic.php?f=135&t=44934"
     }
