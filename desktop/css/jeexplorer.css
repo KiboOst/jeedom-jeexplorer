@@ -134,3 +134,8 @@
   cursor: pointer;
   transform: scale(1.6) translate(-1.5px,0) !important;
 }
+
+[data-page="jeexplorer"] .CodeMirror-lines {
+  border-top: 4px solid rgb(35,35,35) !important;
+  padding: 0;
+}
