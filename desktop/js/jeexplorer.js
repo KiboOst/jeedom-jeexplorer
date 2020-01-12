@@ -45,7 +45,7 @@ $(function() {
 		})
 	}
 
-	CodeMirror.modeURL = "/3rdparty/codemirror/mode/%N/%N.js"
+	CodeMirror.modeURL = "3rdparty/codemirror/mode/%N/%N.js"
 	var options = {
 		url: 'plugins/jeexplorer/3rdparty/elfinder/php/connector.minimal.php',
 		lang: jeeXplorerConfig.lang,
