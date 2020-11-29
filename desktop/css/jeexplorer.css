@@ -42,6 +42,16 @@
   background-color: rgb(75, 75, 75) !important;
 }
 
+#elfinder .elfinder-cwd-view-list thead .ui-state-active {
+  background: rgb(160, 160, 160);
+}
+#elfinder .elfinder-cwd-view-list thead tr > td  {
+  text-align: left;
+}
+#elfinder .elfinder-cwd-view-list thead tr > td .ui-icon::before {
+  display: none;
+}
+
 #elfinder .elfinder-toolbar > .elfinder-button-search > input {
   background-color: rgb(75, 75, 75) !important;
 }
@@ -52,6 +62,24 @@
 #elfinder .elfinder-cwd-filename > textarea {
   font-size: 14px !important;
 }
+
+/* overwrite core css */
+#elfinder .ui-dialog-buttonset .elfinder-dialog-confirm-applyall {
+  margin-bottom: 10px;
+}
+#elfinder input[type="checkbox"]::after {
+  display: none;
+}
+#elfinder input[type="checkbox"] {
+  height: 10px;
+  width: 10px !important;
+  border: none;
+}
+#elfinder input[type="checkbox"]::before {
+  top: 2px;
+  left: 7px;
+}
+
 
 .elfinder-dialog-edit .CodeMirror pre {
   background: initial !important;
