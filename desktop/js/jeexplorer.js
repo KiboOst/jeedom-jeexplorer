@@ -32,7 +32,7 @@ $(function() {
 	if (showWarning == "1") {
 		bootbox.dialog({
 			title: "<div class=\"danger\">Attention</div>",
-			message: "<div class=\"alert alert-danger\">Comme tout explorateur de fichiers, celui-ci vous permet d'accéder et d'éditer tous les fichiers présent dans le répertoire racine de 	Jeedom. Attention donc aux mauvaises manipulations qui pourraient rendre votre Jeedom complètement inopérant ! </div>",
+			message: "<div class=\"alert alert-danger\">Comme tout explorateur de fichiers, celui-ci vous permet d'accéder et d'éditer tous les fichiers présents dans le répertoire racine de Jeedom. Attention donc aux mauvaises manipulations qui pourraient rendre votre Jeedom complètement inopérant ! </div>",
 			buttons: {
 				cancel: {label: '{{Ne plus afficher}}',
 						 className: 'btn-danger',
