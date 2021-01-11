@@ -7,6 +7,10 @@
   background: none !important;
 }
 
+#elfinder .elfinder-dialog.elfinder-to-editing {
+  /* overide z-index! */
+  position: fixed;
+}
 .elfinder-dialog .ui-dialog-buttonset .ui-button-text {
   font-family: "Roboto";
   text-transform: capitalize;
