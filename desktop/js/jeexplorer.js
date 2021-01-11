@@ -32,7 +32,7 @@ $(function() {
 	if (showWarning == "1") {
 		bootbox.dialog({
 			title: "<div class=\"danger\">Attention</div>",
-			message: "<div class=\"alert alert-danger\">Comme tout explorateur de fichiers, celui-ci vous permet d'accéder et d'éditer tous les fichiers présents dans le répertoire racine de Jeedom. Attention donc aux mauvaises manipulations qui pourraient rendre votre Jeedom complètement inopérant ! </div>",
+			message: "<div class=\"alert alert-danger\">Comme tout explorateur de fichiers, celui-ci vous permet d'accéder et d'éditer tous les fichiers présent dans le répertoire racine de 	Jeedom. Attention donc aux mauvaises manipulations qui pourraient rendre votre Jeedom complètement inopérant ! </div>",
 			buttons: {
 				cancel: {label: '{{Ne plus afficher}}',
 						 className: 'btn-danger',
@@ -89,7 +89,8 @@ $(function() {
 					var elfinderInstance = $('#elfinder').elfinder(options).elfinder('instance')
 					var fileUrl = elfinderInstance.url(self.file.hash)
 					fileUrl = fileUrl.replace('/plugins/jeexplorer/3rdparty/elfinder/php/../../../../..', '')
-					$('.elfinder-dialog-active .elfinder-dialog-title').html(fileUrl)
+					var $modal = $(textarea).closest('.ui-front')
+					$modal.find('.elfinder-dialog-title').html(fileUrl)
 
 					this.myCodeMirror = CodeMirror.fromTextArea(textarea, {
 						styleActiveLine: true,
@@ -117,16 +118,14 @@ $(function() {
 						CodeMirror.autoLoadMode(editor, mode);
 					}
 
-					//$(".cm-s-default").height('100%')
 					$(".cm-s-default").style('height', '100%', 'important')
 					editor.setOption('theme', 'monokai')
 
 					//expand on resize modal:
 					$('.elfinder-dialog-edit').resize(function() {
-					editor.refresh()
+						editor.refresh()
 					})
-					$('.elfinder-dialog-active').width('75%')
-					$('.elfinder-dialog-active').css('left', '15%')
+					$modal.width('75%').css('left', '15%')
 
 					setTimeout(function(){
 					editor.scrollIntoView({line:0, char:0}, 20)
