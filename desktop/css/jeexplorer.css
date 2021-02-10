@@ -7,6 +7,18 @@
   background: none !important;
 }
 
+#elfinder .elfinder-dialog.elfinder-to-editing {
+  /* overide z-index! */
+  position: fixed;
+}
+#elfinder .elfinder-bottomtray .elfinder-dialog.elfinder-to-editing {
+  position: relative;
+  margin: 2px;
+}
+
+.elfinder-bottomtray {
+  padding: 5px;
+}
 .elfinder-dialog .ui-dialog-buttonset .ui-button-text {
   font-family: "Roboto";
   text-transform: capitalize;
@@ -22,7 +34,7 @@
 }
 .elfinder-cwd-wrapper {
   color: rgb(115, 115, 115) !important;
-  line-height: 12px !important;
+  line-height: 11px !important;
 }
 
 
@@ -107,7 +119,7 @@
 }
 
 .std42-dialog.elfinder-dialog-minimized .ui-dialog-titlebar {
-  padding: 2px 10px !important;
+  line-height: 10px;
 }
 
 .elfinder-navbar-wrapper {

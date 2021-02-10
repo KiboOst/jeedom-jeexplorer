@@ -53,5 +53,4 @@ include_file('3rdparty/elfinder', 'elfinder.full', 'js', 'jeexplorer');
 
   include_file('desktop', 'jeexplorer', 'css', 'jeexplorer');
   include_file('desktop', 'jeexplorer', 'js', 'jeexplorer');
-  include_file('core', 'plugin.template', 'js');
 ?>
