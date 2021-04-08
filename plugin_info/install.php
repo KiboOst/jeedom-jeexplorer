@@ -23,7 +23,7 @@ function jeexplorer_install() {
 }
 
 function jeexplorer_update() {
-  	config::save('showWarning', '1', 'jeexplorer')
+  	config::save('showWarning', '1', 'jeexplorer');
 }
 
 function jeexplorer_remove() {
